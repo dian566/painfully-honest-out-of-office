@@ -1,0 +1,8 @@
+User instructions (verbatim) that started this work:
+
+23 Nov 2026 12:19 WIB: "pantau terus 24jam pake vps kalo ada bounty langsung join aja"
+
+24 Nov 2026 07:55 WIB: "garap begitu ada langsung garap aja tanpa nanya — yang gratis"
+
+Task for this session (verbatim, from the parent agent):
+"Kamu adalah builder sesi SEGAR untuk bounty make.fun yang BARU dibuka. Sesi ini dimulai 26 Nov 2026 ~07:28 WIB — SETELAH bounty dibuka (publishedAt 2026-11-26T00:27:05Z = 07:27:05 WIB), jadi sesi ini memenuhi check thinking_in_window. JANGAN sertakan sesi lain dalam bundle nanti. BOUNTY: "The Painfully Honest Out-of-Office" — $2 — slug u-po-pu-the-painfully-honest-out-of-office-63e7ca0b — https://make.fun/bounty/u-po-pu-the-painfully-honest-out-of-office-63e7ca0b — tutup 27 Nov 2026 05:25 WIB (deadline 2026-11-26T22:25:00Z). Sponsor Po Pu (u-po-pu, belum terverifikasi). GRATIS — entryFeeUsd null (terverifikasi via API; verifikasi ulang sendiri sebelum submit, pakai field entryFeeUsd BUKAN entryFeesUsd). 0 submission saat ditemukan. BRIEF: satu balasan otomatis out-of-office email, MAKS 200 karakter. Harus jujur sampai menyakitkan soal ketidakhadiran / inbox / antusiasme pengirim, tapi tetap sopan sampai manajer membiarkannya berdiri. Judge membandingkan dua-dua, menimbang kejujuran dulu, lalu kesopanan, lalu gaya bahasa; balasan paling jujur yang tetap terdengar profesional menang."
