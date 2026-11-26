@@ -3,28 +3,28 @@
 """Entry for the make.fun bounty "The Painfully Honest Out-of-Office".
 
 The reply on offer: one painfully honest but still polite out-of-office
-auto-reply. It admits the private truth every employee knows — the inbox
-is a backlog that only gets skimmed, enthusiasm fading with each message —
-while staying warm enough ("thank you for writing") that a manager would
-let it stand. The script is deliberately boring: it checks one fixed
-175-character line and writes the same bytes to /output/entry.txt on
-every run, with no randomness, no clock, no network and no input to read.
+auto-reply. It admits the private truth every employee knows — incoming
+mail is triaged, the urgent first, the interesting second, and the rest
+only if they survive both lists — while opening with a warm "Thank you
+for your email" so a manager would let it stand. The script is
+deliberately boring: it checks one fixed 154-character line and writes
+the same bytes to /output/entry.txt on every run, with no randomness, no
+clock, no network and no input to read.
 
 The checks mirror the bounty gate and the judge brief: one sentence, at
 most 200 characters, no padding, no line breaks, valid UTF-8 — plus two
 guards of its own, so a typo can never silently change the entry: the
-line must carry a concrete inbox count (the honest anchor) and must not
-contain a doubled space or a doubled punctuation mark.
+line must carry the triage admission (urgent, interesting, survives) and
+must not contain a doubled space or a doubled punctuation mark.
 """
 
-import re
 import sys
 from pathlib import Path
 
 ENTRY = (
-    "I'm away until Monday, and your email joins the 412 unread messages "
-    "I'll skim with fading enthusiasm \u2014 thank you for writing, and "
-    "I'll reply if it still matters when I'm back."
+    "Thank you for your email \u2014 I'm away until Monday, and I'll "
+    "answer the urgent ones first, the interesting ones second, and "
+    "yours if it survives both lists."
 )
 OUT_FILE = Path("/output/entry.txt")
 LIMIT = 200
@@ -46,9 +46,11 @@ def check(text: str) -> str:
         raise ValueError("entry must be exactly one sentence ending in one period")
     if "  " in text or ".." in text or ",," in text:
         raise ValueError("entry must not contain doubled spaces or punctuation")
-    if not re.search(r"\b\d{2,}\b", text):
-        raise ValueError("entry must name a concrete inbox count (the honest anchor)")
-    if "thank you" not in text.lower():
+    lowered = text.lower()
+    for anchor in ("urgent", "interesting", "survives"):
+        if anchor not in lowered:
+            raise ValueError(f"entry must carry the triage admission ({anchor} missing)")
+    if "thank you" not in lowered:
         raise ValueError("entry must keep the polite thank-you so a manager lets it stand")
     text.encode("utf-8")
     return text

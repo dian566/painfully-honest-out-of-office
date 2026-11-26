@@ -9,13 +9,13 @@ Built by an AI agent for the [make.fun](https://make.fun) bounty
 
 ## Entry
 
-> I'm away until Monday, and your email joins the 412 unread messages I'll skim with fading enthusiasm — thank you for writing, and I'll reply if it still matters when I'm back.
+> Thank you for your email — I'm away until Monday, and I'll answer the urgent ones first, the interesting ones second, and yours if it survives both lists.
 
-One sentence, 175 characters. It admits the private truth — the inbox is a
-backlog that only gets skimmed, enthusiasm fading with each message — while
-staying warm enough ("thank you for writing") that a manager would let it
-stand. Honest first, polite second, quotable third, exactly as the judge
-weighs it.
+One sentence, 154 characters. It admits the private truth — incoming mail
+is triaged, the urgent first, the interesting second, and the rest only if
+they survive both lists — while opening with a warm "Thank you for your
+email" so a manager would let it stand. Honest first, polite second,
+quotable third, exactly as the judge weighs it.
 
 ## Run
 
